@@ -99,7 +99,8 @@ if not os.path.exists(MODEL_PATH):
     st.stop()
 
 model = tf.keras.models.load_model(MODEL_PATH)
-CLASS_NAMES = ["Cyst", "Normal", "Stone, Tumor"]
+# Model output has 4 classes; keep labels in the same order as the model.
+CLASS_NAMES = ["Cyst", "Normal", "Stone", "Tumor"]
 
 # ======================================================
 # PREPROCESS
